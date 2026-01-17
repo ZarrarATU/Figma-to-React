@@ -1,0 +1,121 @@
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    color: black;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    transition: all 0.2s ease;
+}
+.mobile-menu.open {
+  clip-path: inset(0 0 0 0);
+}
+
+.mobile-menu.close {
+  clip-path: inset(0 0 100% 0);
+}
+
+.close-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.close-btn img {
+    width: 12px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.mobile-option {
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mobile-option a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.mobile-option a:hover {
+    background: #f2f2f2;
+}
+
+.mobile-location-list {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.locations{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.location-icon{
+    width: 20px;
+}
+.current-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+.current-text p{
+    margin: 0;
+    padding: 0;
+}
+.current-text .lang{
+    font-size: 11px;
+    color: rgb(113, 113, 113);
+}
+
+
+
+@media (max-width: 640px) {
+    .mobile-option{
+         font-size: 15px;
+    }
+    .current-text{
+         font-size: 15px;
+    }
+    .current-text .lang{
+    font-size: 12px;
+}
+}
