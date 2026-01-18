@@ -1,6 +1,8 @@
 import './MobileMenu.css'
 
 function MobileMenu({menu,handleMenu}) {
+
+  
   return (
   <ul className={`mobile-menu ${menu ? 'open' : 'close'}`}>
       <li onClick={handleMenu} className='close-btn'>

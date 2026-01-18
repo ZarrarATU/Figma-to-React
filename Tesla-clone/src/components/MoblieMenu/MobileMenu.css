@@ -4,7 +4,7 @@
     background: white;
     color: black;
     position: fixed;
-    z-index: 10;
+    z-index: 15;
     top: 0;
     left: 0;
     display: flex;
