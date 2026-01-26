@@ -1,0 +1,221 @@
+.features-section {
+    width: 100%;
+    height: 480px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.features-video {
+    width: 65%;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.features-video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.features-discover {
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+
+.features-discover img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.features-discover-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    font-size: 28px;
+}
+
+.features-discover-text h4 {
+    font-family: Poppins;
+    font-weight: 500;
+    margin: 0;
+}
+
+.features-discover-text button {
+    width: 120px;
+    padding: 6px 10px;
+    font-family: Poppins;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #3e6ae1;
+    color: white;
+
+}
+
+.features-video-options {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 12;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature-video-text {
+    height: 100%;
+    font-family: Poppins;
+    font-size: 25px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.feature-video-button {
+    height: 100%;
+}
+
+.feature-video-btns {
+    margin-top: -20px;
+    display: flex;
+    gap: 10px;
+}
+
+.feature-video-btns button {
+    width: 120px;
+    padding: 6px 10px;
+    font-family: Poppins;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.demo-drive {
+    background: #3e6ae1;
+    color: white;
+}
+
+.feature-video-button button {
+    display: flex;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    border-radius: 2px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.feature-video-button button img {
+    width: 20px;
+}
+
+
+@media (max-width: 1024px) {
+    .features-section {
+        flex-direction: column;
+        height: 850px;
+        align-items: center;
+    }
+
+    .features-video {
+        width: 95%;
+        height: 50%;
+    }
+
+    .features-discover {
+        width: 95%;
+        height: 50%;
+        font-size: 350px;
+    }
+
+    .feature-video-text {
+        font-size: 40px;
+    }
+
+    .features-discover-text {
+        font-size: 40px;
+    }
+
+    .feature-video-btns button {
+        width: 200px;
+        font-size: 16px;
+    }
+    .features-discover-text button{
+        width: 200px;
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+   .feature-video-button{
+    display: none;
+   }
+}
+
+@media (max-width: 480px) {
+    .features-section{
+        padding: 10px;
+    }
+    .features-video {
+        width: 100%;
+    }
+
+    .features-discover {
+        width: 100%;
+    }
+
+    .feature-video-text {
+        font-size: 28px;
+    }
+
+    .features-discover-text {
+        font-size: 28px;
+    }
+
+     .feature-video-text {
+        font-size: 30px;
+    }
+
+    .features-discover-text {
+        font-size: 30px;
+    }
+
+    .feature-video-btns button {
+        width: 50%;
+        font-size: 14px;
+    }
+    .features-discover-text button{
+        width: 150px;
+        font-size: 14px;
+    }
+
+}

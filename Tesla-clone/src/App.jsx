@@ -4,6 +4,8 @@ import HeroSlider from './components/HeroSlider/HeroSlider'
 import Carousel from './components/Carousel/Carousel'
 import PromoSection from './components/PromoSection/PromoSection'
 import PromoCard from './components/PromoSection/PromoCard'
+import FeaturesSection from './components/FeaturesSection/FeaturesSection'
+import Map from './components/Map/Map'
 
 const promoCard = [
   {
@@ -32,6 +34,9 @@ function App() {
           <PromoCard title={promoCard[0].title} des={promoCard[0].des} img={promoCard[0].desktop}></PromoCard>
           <PromoCard title={promoCard[1].title} des={promoCard[1].des} img={promoCard[1].desktop}></PromoCard>
        </PromoSection>
+
+       <FeaturesSection></FeaturesSection>
+       <Map></Map>
 
     </div>
   )
