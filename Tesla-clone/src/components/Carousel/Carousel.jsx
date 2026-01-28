@@ -1,51 +1,9 @@
 import { useRef, useState } from 'react'
 import './Carousel.css'
 
-function Carousel() {
+function Carousel({carousel}) {
 
-  const carousel = [
-    {
-      desktop: '/public/images/Homepage-carousel-desktop-model-y.jpg',
-      phone: '/public/images/Homepage-Card-Model-Y-Performance-Mobile-NA.jpg',
-      name: 'Midsize SUV',
-      title: 'Model Y',
-      des: '',
-      id: '523432'
-    },
-    {
-      desktop: '/public/images/Homepage-carousel-desktop-model-3.jpg',
-      phone: '/public/images/Homepage-Card-Model-3-Mobile-US-v2.jpg',
-      name: 'Sport Sedan',
-      title: 'Model 3',
-      des: '',
-      id: '5223432'
-    },
-    {
-      desktop: '/public/images/Homepage-carousel-desktop-cyber-truck.jpg',
-      phone: '/public/images/Homepage-Card-Cybertruck-Mobile-US-v3.jpg',
-      name: 'Utility Truck',
-      title: 'Cyber Truck',
-      des: '3.99% APR Available',
-      id: '5234323'
-    },
-    {
-      desktop: '/public/images/Homepage-carousel-desktop-model-X.jpg',
-      phone: '/public/images/Homepage-Card-Model-X-New-Mobile-US-v4.jpg',
-      name: 'Luxury SUV',
-      title: 'Model X',
-      des: '3.99% APR Available',
-      id: '4523432'
-    },
-    {
-      desktop: '/public/images/Homepage-carousel-desktop-model-S.jpg',
-      phone: '/public/images/Homepage-Card-Model-S-Mobile-US-v3.jpg',
-      name: 'Luxury Sedan',
-      title: 'Model S',
-      des: '3.99% APR Available',
-      id: '523434432'
-    },
 
-  ]
 
   let [index, setIndex] = useState(0)
   const isMobile = window.innerWidth <= 768
