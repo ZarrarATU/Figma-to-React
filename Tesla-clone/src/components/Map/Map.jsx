@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import teslaIcon from '/public/images/tesla-icon.svg'
 import './Map.css'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
@@ -50,7 +49,12 @@ function Map() {
 
     if (leafletRef.current) return;
 
-    leafletRef.current = L.map(mapRef.current).setView([31.122784, 70.652145], 5)
+
+    leafletRef.current = L.map(mapRef.current, {
+      center: [31.122784, 70.652145],
+      zoom: 5,
+      gestureHandling: true
+    })
 
     let TilePng = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
@@ -67,7 +71,7 @@ function Map() {
     </div>
   `,
       className: '',
-      iconSize: [5, 5],
+      iconSize: [4, 4],
       iconAnchor: [10, 10]
     })
 
@@ -83,10 +87,10 @@ function Map() {
   `
 
       let marker = L.marker(loc.coords, { icon: locIcon });
-      marker.addTo(leafletRef.current).bindPopup(popupHTML,{
-          closeButton: true,
-      maxWidth: 260,
-      className: 'custom-popup'
+      marker.addTo(leafletRef.current).bindPopup(popupHTML, {
+        closeButton: true,
+        maxWidth: 260,
+        className: 'custom-popup'
       })
     })
 
@@ -102,7 +106,16 @@ function Map() {
   return (
     <div className='map-div'>
       <div ref={mapRef} id='map' className="map">
+      </div>
 
+      <div className="map-stores">
+        <h5 className='find-your-charge'>Find Your Charge</h5>
+        <p className="charge-para">View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+        <div className="map-stores-btns">
+          <button className='view-network'>View Network</button>
+          <button className='stores-learn-more'>Learn More</button>
+          <img className='charge-img' src="/public/images/charge.svg" />
+        </div>
       </div>
 
 
